@@ -8,6 +8,8 @@ TECHNOLOGIES:
 3: node.js <br />
 4: mongodb <br />
 5: mongoose <br />
+6: Template Engine: Jade <br />
+7: Framework: express
 
 LOGIC:
 =========
@@ -61,3 +63,12 @@ JS DESIGN PATTERN
 ===========
 
 Prototype
+
+
+SOME SNAPSHOTS:
+==========
+
+
+![alt tag](http://s30.postimg.org/6h9c80xup/image.png)
+![alt tag](http://s23.postimg.org/p5ygeg32z/image.png)
+![alt tag](http://s27.postimg.org/i3msg4u2r/image.png)
