@@ -1,0 +1,114 @@
+extends layout
+
+block content
+    .mainContent
+      .header
+        h1
+          | YOUR SHOPPING BAG
+          span.itemCounter.floatRight #{products.length} ITEMS
+      .cart.cartHeading
+        .cartItems
+          input#products(value="#{JSON.stringify(products)}")
+          .cartCell.imageContainer
+            | #{products.length} ITEMS
+          .cartCell.itemInfo
+            .innerCartCell
+              .details.floatLeft
+              .size.floatLeft  SIZE
+              .qty.floatLeft  QTY
+              .price.floatLeft  PRICE
+      .cart.cartContent
+        -var total = 0;
+        -for ( var i=0; i<products.length; i++ )
+          -var itemArr = products[i]
+          -total += parseFloat(itemArr.p_price);
+          .cartItems(id='row_#{itemArr._id}')
+            .cartCell.imageContainer
+              img(src='#{itemArr.p_image}', alt='Tshirt 1', title='Tshirt 1')
+            .cartCell.itemInfo
+              .innerCartCell
+                .details.floatLeft
+                  p  #{itemArr.p_name.toUpperCase()}
+                  p  Style #: #{itemArr.p_style}
+                  p  Color: &nbsp;
+                    span.colorName #{itemArr.p_selected_color.name}
+                .measures
+                  .size.floatLeft  #{itemArr.p_selected_size.code.toUpperCase()}
+                  .qty.floatLeft
+                    input.inputSize(type='text', name='qty', value='#{itemArr.p_quantity}', maxlength='1', onkeyup="Cart.updateQtyHome(this)")
+                  .price.floatLeft
+                    span #{itemArr.c_currency}
+                    span.calcPrice#originalPrice(data-price='#{itemArr.p_price}') #{parseFloat(itemArr.p_price).toFixed(2)}
+              .clear.controls
+                a.js-open-modal(href='javascript:void(0)', data-modal-id='popup', title='Edit', data-item="#{JSON.stringify(itemArr)}")  EDIT
+                span.separator
+                a(href='javascript:void(0)', title='Romove', onclick="Cart.remove('#{itemArr._id}');")
+                  span.closeBtn X
+                  |   REMOVE
+                span.separator
+                input(type='hidden', class="itemCart", value='#{JSON.stringify(itemArr)}' )
+                a(href='javascript:void(0)', title='Save for later', onclick='Cart.saveForLater(this, "#{itemArr._id}")')  SAVE FOR LATER
+
+      .checkoutSection.clear
+        .leftContainer
+          p
+            strong Need help or have any questions?
+          p  Call customer service at: 1-800-555-55555
+          p
+            a(href='javascript:void(0)', title='Chat with one of our stylists.')  Chat with one of our stylists.
+          p
+          p
+            a(href='javascript:void(0)', title='See Return & exhange policy')  See Return & exhange policy
+          p
+        .rightContainer
+          .promotionalCodeBlock
+            .codeDetails
+              label(for='promotionCode')  ENTER PROMOTION CODE OR GIFT CARD
+            span.promotionCodeInput
+              input#promotionCode.input.promotionCode(type='text', name='promotionCode' , onkeyup="Cart.applyCoupon(this)")
+              button(onclick="Cart.promoCodes();")  APPLY
+          .clear.lineHeightBlock
+            div
+              | SUBTOTAL
+              span.floatRight#subTotal(data-subtotal="#{total}") $ #{parseFloat(total).toFixed(2)}
+            div.promotionCodeBlock
+              | PROMOTION CODE&nbsp;
+              strong JF10
+              |  APPLIED
+              span.floatRight -
+                span#currency  #{itemArr.c_currency}
+                | &nbsp;
+                span#codeDiscount.discountPrices
+                | 0
+            div
+              | DISCOUNT APPLIED
+              span.floatRight#discount.discountPrices
+            div
+              .floatLeft.priceCalc
+                p
+                  | ESTIMATED SHIPPING*
+                p.helpText You qualify for free shipping because your order is over$ 50*
+              .floatRight  FREE
+          hr.lineSeparator
+          .estimatedTotalBlock.clear.estimatedShipping
+            .floatLeft
+              p ESTIMATED TOTAL
+              p.helpText Tax will be applied during checkout
+            .floatRight#estimatedTotal
+          hr.clear.lineSeparatorBroader
+          .checkoutBlock
+            a(href='javascript:void(0)', title='')  CONTINUE SHOPPING
+            button.blueBtn  CHECKOUT
+            .safeCheckout
+              img(src='images/lock.jpg', alt='Safe checkout', title='Safe checkout')
+              label  Secure checkout. Shopping is always safe and secure.
+          .loginOption.hide
+            a(href='javascript:void(0)')  SIGN IN
+            |  to save your cart and have
+            |  access to your items on mobile, tablet, and desktop.
+      .clear
+    #popup.modal-box
+      a.js-modal-close.close(href='javascript:void(0)') ×
+      .modal-body
+        p ERROR CODE: 500
+    script(type='text/javascript', src='javascripts/common.js')
