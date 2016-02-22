@@ -3,11 +3,11 @@
 TECHNOLOGIES:
 =========
 
-1: Html5/css3
-2: jQuery
-3: node.js
-4: mongodb
-5: mongoose
+1: Html5/css3 <br />
+2: jQuery <br />
+3: node.js <br />
+4: mongodb <br />
+5: mongoose <br />
 
 LOGIC:
 =========
@@ -22,13 +22,13 @@ RUNNING APP
 
 Start the node server by default it is running on port: 3000.
 
-npm start
+npm start <br />
 OR
-node ./bin/www
+node ./bin/www <br />
 OR
-nodemon ./bin/www
+nodemon ./bin/www <br />
 OR
-forever start ./bin/www
+forever start ./bin/www <br />
 
 Thats all.
 
@@ -36,19 +36,19 @@ Thats all.
 SOME SAMPLE COUPON CODES
 ===========
 
-['DS1', 'JF5', 'JF10', 'PROMO20']
+['DS1', 'JF5', 'JF10', 'PROMO20'] <br />
 
-DS1: 1%
-JF5: 5%
-JF10: 10%
-PROMO20: 20%
+DS1: 1% <br />
+JF5: 5% <br />
+JF10: 10% <br />
+PROMO20: 20% <br />
 
 DISCOUNT LOGIC
 ===========
 
-3 items in cart - 5% discount on subtotal amount
-3-6 items in cart - 10% discount on subtotal amount
->6 – 25% discount on subtotal amount
+3 items in cart - 5% discount on subtotal amount <br />
+3-6 items in cart - 10% discount on subtotal amount <br />
+>6 – 25% discount on subtotal amount <br />
 
 JS DESIGN PATTERN
 ===========
