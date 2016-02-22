@@ -17,14 +17,16 @@ The application saves the items from Cart.json to mongodb database and loads fro
 Once the user removes all the cart items. The application again fetched items from Cart.json and saves to mongodb.
 
 
-RUNNING APP
+Install packages
 =========
 
 Start the node server by default it is running on port: 3000.
 
 Install npm packages. I have all the dependencies in package.json
 
-Run:
+<br/>
+
+RUNNING APP
 -----
 <code> npm install </code>
 npm start <br />
