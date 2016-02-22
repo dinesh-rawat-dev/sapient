@@ -22,6 +22,11 @@ RUNNING APP
 
 Start the node server by default it is running on port: 3000.
 
+Install npm packages. I have all the dependencies in package.json
+
+Run:
+-----
+<code> npm install </code>
 npm start <br />
 OR
 node ./bin/www <br />
