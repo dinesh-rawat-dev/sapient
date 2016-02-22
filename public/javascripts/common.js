@@ -1,7 +1,13 @@
+/*
+@Description: Updates cart html
+*/
 var UpdateCart = function(item) {
     var modalBody = $('.modal-body');
     this.promos = ['DS1', 'JF5', 'JF10', 'PROMO20'];
 
+/*
+@Description: Discounts
+*/
     this.discount = function() {
         var products = $("input#products").val();
         items = JSON.parse(products),
@@ -22,6 +28,9 @@ var UpdateCart = function(item) {
         estimatedTotal.text('$ ' + estimatedTotalValue);
     };
 
+/*
+@Description: Returns discount percentage by total cart items
+*/
     this.discountPercentage = function(totalItems) {
         var disc = 5;
         if (totalItems >= 3 && totalItems < 6) {
@@ -32,6 +41,9 @@ var UpdateCart = function(item) {
         return disc;
     };
 
+/*
+@Description: Color variations of the item in cart
+*/
     this.selectColors = function(thisObj) {
         $('.productColors span').removeClass('selectColor');
         var style = $(thisObj).data('colors');
@@ -40,6 +52,9 @@ var UpdateCart = function(item) {
         $('#colorHidden').val(style);
     };
 
+/*
+@Description: Add item details to modal
+*/
     this.cartHTML = function(item) {
         var colors = item.p_available_options.colors;
         var sizes = item.p_available_options.sizes;
@@ -87,6 +102,9 @@ var UpdateCart = function(item) {
         $(window).resize();
     };
 
+/*
+@Description: Apply promo codes
+*/
     this.promoCodes = function() {
         var promoCode = $('#promotionCode'),
             promoValue = promoCode.val();
@@ -119,6 +137,9 @@ var UpdateCart = function(item) {
         }
     };
 
+/*
+@Description: Updates item qty
+*/
     this.updateQty = function(thisObj) {
         var _this = $(thisObj),
             qty = _this.val(),
@@ -126,7 +147,6 @@ var UpdateCart = function(item) {
         price = priceBlock.data('originalprice'),
             price = parseFloat(price);
 
-        //console.log($('.productPrice span').data());
         if (qty != 0) {
             var price = price * qty,
                 price = parseFloat(price).toFixed(2);
@@ -135,6 +155,9 @@ var UpdateCart = function(item) {
         }
     };
 
+/*
+@Description: Add to bag
+*/
     this.saveCartDetails = function(thisObj) {
         var item = JSON.parse($('#itemCart').val());
         item.p_price = $('.productPrice')
@@ -195,6 +218,9 @@ var UpdateCart = function(item) {
         });
     };
 
+/*
+@Description: If the user clicks on sav later
+*/
     this.saveForLater = function(thisObj, id) {
         var item = JSON.parse($(thisObj).prev('input').val());
         var inputValue = $('#row_' + id).find('.qty').find('input').val();
@@ -221,6 +247,9 @@ var UpdateCart = function(item) {
         }
     };
 
+/*
+@Description: Removes the item from the cart
+*/
     this.remove = function(id) {
         if (confirm('Are you sure to delete this?')) {
             $.ajax({
@@ -237,6 +266,10 @@ var UpdateCart = function(item) {
             });
         }
     };
+
+/*
+@Description: Update qty in cart of an item
+*/
     this.updateQtyHome = function(thisObj) {
         var _this = $(thisObj),
             qty = _this.val() || 1,
@@ -250,14 +283,11 @@ var UpdateCart = function(item) {
         this.calculatePrice();
 
         priceBlock.text(parseFloat(price).toFixed(2));
-
-        // if (qty != 0) {
-
-        // } else {
-        //    this.calculatePrice(1);
-        //     priceBlock.text(parseFloat(price).toFixed(2));
-        // }
     };
+
+/*
+@Description: Calculate prices
+*/
     this.calculatePrice = function() {
         var price = 0;
         $('.calcPrice').each(function() {
@@ -280,6 +310,11 @@ var UpdateCart = function(item) {
         var finalPrice = price - discounts;
         $("#estimatedTotal").text('$ ' + parseFloat(finalPrice).toFixed(2));
     };
+
+
+/*
+@Description: Manage discount block
+*/
     this.applyCoupon = function(thisObj) {
         var _this = $(thisObj);
         if ($.trim(_this.val()) == '') {
