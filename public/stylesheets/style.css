@@ -1,0 +1,87 @@
+div.innerCartCell div.price,div.innerCartCell div.qty,div.innerCartCell div.size,input.inputSize{text-align:center}body{color:#595A5C;font-family:'Noto Sans',sans-serif}.clear:after{content:".";display:block;height:0;clear:both;visibility:hidden;line-height:0}.header h1 span,.hide{display:none}a{color:#666;text-decoration:underline}div.itemInfo{color:#7D7D7D}.header{margin-bottom:40px}.header h1{font-size:30px;font-weight:300}.clear,html[xmlns] .clear{display:block}.clear{clear:both}* html .clear{height:1%}div.mainContent{width:80%;margin:30px auto;min-height:100%;font-size:15px;padding:0 0 0 10px}.cartCell{display:table-cell;vertical-align:top}.cartContent .cartCell{border-bottom:1px solid #DCDCDC}.cartContent .cartItems:last-child .cartCell{border-bottom:4px solid #DCDCDC}.cart{display:table;width:100%;border-bottom:1px solid #DCDCDC}.cartHeading{border-bottom:4px solid #DCDCDC;padding:15px 0;border-top:1px solid #DCDCDC}.imageContainer{width:24%}.cartItems{display:table-row}.innerCartCell{display:inline-block;width:100%}.details{width:54%;border:1px solid #fff}.size{width:10%}.qty{width:20%}.price{width:15%}input.inputSize{width:12%;padding:5px;border:1px solid #DCDCDC}div.cartContent .cartItems .cartCell{padding:20px 0}div.innerCartCell p{margin:0 0 2px;line-height:18px}div.measures div{line-height:20px}div.cartContent p{color:silver}div.cartContent div.details p:first-child{font-size:15px;color:#59595B}span.itemCounter{font-size:20px;font-weight:400;padding-top:5px}div.header{width:100%}.priceCalc{width:50%}.priceCalc p{line-height:16px;padding:0;margin:4px 0}---------- div.estimatedShipping{line-height:5px}div.checkoutSection{margin-top:30px}div.leftContainer{float:left;width:30%}.helpText{color:#ACACAC}div.rightContainer{width:60%;float:right;margin-left:60px}button{font-size:100%;padding:9px 7px}div.subtotalBlock{margin-top:10px}.floatLeft{float:left}.floatRight{float:right}hr{width:100%}hr.lineSeparatorBroader{border:2px solid #DCDCDC}hr.lineSeparator{border:1px solid #DCDCDC}div.checkoutBlock{text-align:right}div.lineHeightBlock{line-height:60px}.estimatedShipping p{line-height:5px}div.checkoutBlock,div.estimatedTotalBlock{padding:20px 0}div.safeCheckout{margin-top:10px;color:#BBB}div.safeCheckout img{padding-top:5px}button.blueBtn{background:#1069BD;color:#FFF;margin-left:5px;border:1px solid #1069BD}.priceCalculations{width:100%;display:inline-table}div.promotionalCodeBlock{padding-bottom:30px;text-align:center;display:inline-block;width:100%;border-bottom:4px solid #DCDCDC}div.codeDetails{float:left;width:33%;text-align:left}div.promotionalCodeBlock label{width:100%;display:block;float:left;margin-right:5px;line-height:20px}.controls{margin-top:50px}div.promotionalCodeBlock input.promotionCode{width:38%;padding:10px}div.promotionalCodeBlock button{float:right}div.checkoutSection div.leftContainer p{margin-bottom:25px}div.controls a{padding:10px 4px 0 0}..... @media (min-width:980px){div.imageContainer{width:20%} }@media (max-width:767px){.cartContent .details,.cartContent .price,.cartContent .qty,.cartContent .size,.innerCartCell{width:100%;text-align:left!important;line-height:28px}.cartContent .size::before{content:"Size: "}.cartContent .qty::before{content:"QTY: "}.cartContent .price{font-size:15px;font-weight:600}div.promotionalCodeBlock{padding-bottom:0}div.codeDetails{float:none;width:100%;text-align:center}.imageContainer{width:35%}div.measures div{line-height:34px!important}div.cartHeading{display:none}div.header{border-bottom:4px solid #DCDCDC;border-top:1px solid #DCDCDC;margin-bottom:20px;display:inline-block}.header h1 span{display:block}.price{color:#58585A}.controls{position:absolute;left:40px;margin:0}.cart,div.safeCheckout{position:relative}div.checkoutBlock{display:flex;flex-direction:column;text-align:center}div.estimatedTotalBlock,div.lineHeightBlock{text-align:left}div.leftContainer{display:none}div.safeCheckout{order:3}div.checkoutBlock button{order:1}div.checkoutSection a{order:2}div.checkoutSection button{order:1;margin-bottom:40px}.codeDetails{width:40%;display:inline-block}button.blueBtn,div.promotionalCodeBlock label,div.rightContainer{width:100%}div.promotionalCodeBlock button{float:none;margin-left:5px}div.rightContainer{margin-left:0}.promotionCodeInput{width:100%;display:inline-block}div.safeCheckout img{padding-top:5px;position:absolute;top:20px;left:50%}.loginOption{display:block;margin-top:40px;padding:40px 0;border-top:4px solid #DCDCDC}}@media (max-width:512px){.header h1 span{width:100%}div.cartContent .cartItems .itemInfo{padding:20px 0 20px 15px}} span.separator {border: 1px solid #ccc; margin-right: 3px; }.modal-box {position: fixed!important;}body {margin: 0;padding: 0;}html { position: relative;}button { cursor: pointer;}#products { display: none; } .cartTable { display: inline-block; width: 100%;} .productColors span.colors {
+    padding: 13px;
+    display: inline-block;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+.cartTable .productSizes {     width: 100%; }
+
+.cartTable .cartContent {
+    border-top: 4px solid #DCDCDC;
+    padding: 30px 40px 40px 10px;
+    margin-top: 40px;
+    text-align: center;
+    width: 37%;
+    line-height: 40px;
+    margin-left: 60px;
+}
+
+.productPrice span {
+    font-size: 40px;
+}
+.productPrice {
+    vertical-align: top;
+    display: inline;
+}
+.productColors {
+    margin-top: 30px;
+}
+
+.productBtn button { margin-top: 30px; }
+.cartItemImg { margin-right: 10px; }
+
+select {
+  padding: 10px 30px 10px 10px;
+  background: #f8f8f8;
+  color: #444;
+  border: 1px solid #aaa;
+  border-radius: 0;
+  display: inline-block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.selectColor { border: 3px solid #ccc !important; }
+.cartItemImg {
+    margin-right: 100px;
+    margin-top: 20px;
+}
+.cartContent button { margin-left: 0px; }
+select.availableSizes {
+    margin-right: 5px;
+    width: 40%;
+}
+.cartContent button {
+    margin-left: 0px;
+    width: 85%;
+}
+.productBtn {
+    width: 100%;
+    display: inline-block;
+    margin-left: 20px;
+}
+.promotionCodeBlock { display: none; }
+@media (max-width:1115px){
+  .modal-body .itemDetails div {
+      width: 100%;
+  }
+}
+
+@media (max-width: 1000px ) {
+  .cartContent.floatLeft {
+        border-top: 4px solid #DCDCDC;
+        padding: 30px 0px 0px 10px;
+        width: 100%;
+        margin-left: 0px;
+    }
+    .cartItemImg {
+        margin-right: 0;
+        margin-top: 0;
+        width: 100%;
+        text-align: center;
+    }
+}
